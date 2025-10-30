@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Flat Forest GUI Set</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: url('your-forest-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .container {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  /* Title Badge - Flat Forest Style */
+  .title-badge {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 40px 60px;
+    background: #e6d9bf;
+    border-radius: 40% / 50%;
+    box-shadow: 0 5px 0 #ccc;
+    color: #355e1e;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+  }
+
+  /* Ribbon Banner */
+  .title-badge .ribbon {
+    position: relative;
+    display: inline-block;
+    background: #4f7a1f;
+    color: #fff;
+    padding: 12px 60px;
+    font-size: 2.2rem;
+    font-weight: 900;
+    border-radius: 6px;
+    z-index: 2;
+    box-shadow: 0 4px 0 #3d5f18;
+  }
+
+  /* Left and Right ribbon tails */
+  .title-badge .ribbon::before,
+  .title-badge .ribbon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 25px solid transparent;
+    z-index: -1;
+  }
+
+  .title-badge .ribbon::before {
+    left: -45px;
+    border-right-color: #4f7a1f;
+  }
+
+  .title-badge .ribbon::after {
+    right: -45px;
+    border-left-color: #4f7a1f;
+  }
+
+  /* Top and Bottom text */
+  .title-badge .title-text {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #355e1e;
+  }
+
+  .title-badge .title-text.top {
+    margin-bottom: 15px;
+  }
+
+  .title-badge .title-text.bottom {
+    margin-top: 15px;
+  }
+
+  /* Button styles */
+  .btn {
+    display: block;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 10px auto;
+    width: 150px;
+    padding: 10px 0;
+    background: #fcb415;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow:
+      0 3px 0 #cc8b00,
+      0 5px 10px rgba(0, 0, 0, 0.15);
+    color: white;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  }
+
+  .btn:hover {
+    background: #fdd835;
+  }
+
+  .btn:active {
+    box-shadow: none;
+    transform: translateY(3px);
+  }
+
+  /* Bottom icons container */
+  .bottom-icons {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .icon-btn {
+    background: #fa5b2b;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+  }
+
+  .icon-btn:hover {
+    transform: scale(1.1);
+    background: #ff7043;
+  }
+
+  .icon-btn svg {
+    fill: white;
+    width: 28px;
+    height: 28px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <!-- Title Badge -->
+  <div class="title-badge">
+    <div class="title-text top">Flat</div>
+    <div class="ribbon">
+      <span>Forest</span>
+    </div>
+    <div class="title-text bottom">GUI Set</div>
+  </div>
+
+  <button class="btn">Play</button>
+  <button class="btn">Log In</button>
+  <button class="btn">Exit</button>
+</div>
+
+<div class="bottom-icons">
+  <div class="icon-btn" title="Favorites">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+      2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+      C13.09 3.81 14.76 3 16.5 3
+      19.58 3 22 5.42 22 8.5
+      c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+  </div>
+
+  <div class="icon-btn" title="Achievements">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2L15.09 8.26L22 9.27
+      L17 14.14L18.18 21.02L12 17.77
+      L5.82 21.02L7 14.14L2 9.27
+      L8.91 8.26L12 2z"/>
+    </svg>
+  </div>
+
+  <div class="icon-btn" title="Menu">
+    <svg viewBox="0 0 24 24" width="40" height="40" fill="white">
+      <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/>
+    </svg>
+  </div>
+
+  <div class="icon-btn" title="Shop">
+    <svg viewBox="0 0 24 24">
+      <path d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2
+      2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2
+      s.896 2 2 2 2-.896 2-2-.896-2-2-2zM7.164 
+      14l-1.66-8h14.964l-1.561 7.51a2 2 0 01-1.955 1.49H7.52"/>
+    </svg>
+  </div>
+</div>
+
+</body>
+</html>
